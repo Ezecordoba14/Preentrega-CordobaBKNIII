@@ -121,6 +121,12 @@ Se utiliza express-session para mantener la sesión en MongoStore. Adicionalment
 ## Autenticación y autorización
 
 Se utiliza express-session para mantener la sesión en MongoStore. Adicionalmente se utiliza passport y JsonWebToken como estatregia de autenticación y autorización a lo largo de la navegación del sitio, teniendo como objetivo principal no autorizar ciertos accesos y proteger la sesión del usuario así como también sus datos sensibles. Se utiliza cookie-parser para poder extraer los tokens generados en los inicios de sesión, y permite la navegación durante una hora sin cerrar la sesión de manera automática.
+## Swagger
+Para ver la documentación de los endpoints users, abrir en el navegador:
+```bash
+http://localhost:8080/api-docs
+```
+![Image swagger](./src/public/img/swagger.png)
 ## Estructura
 ```
 src
@@ -153,6 +159,8 @@ src
  ┃ ┃ ┣ mockingPets.png
  ┃ ┃ ┣ mockingUsers.png
  ┃ ┃ ┣ petsMongo.png
+ ┃ ┃ ┣ swagger.png
+ ┃ ┃ ┣ test.png
  ┃ ┃ ┗ usersMongo.png
  ┣ repository
  ┃ ┣ AdoptionRepository.js
@@ -167,11 +175,22 @@ src
  ┃ ┗ users.router.js
  ┣ services
  ┃ ┗ index.js
+ ┣ test
+ ┃ ┗ supertest.test.js
  ┣ utils
  ┃ ┣ index.js
+ ┃ ┣ swagger.js
  ┃ ┗ uploader.js
  ┗ app.js
 ```
+## Testeo
+Este comando ejecuta los tests funcionales definidos en el archivo `src/test/supertest.test.js`
+El siguiente comando permitira ejecutar el testeo
+```bash
+npm test
+```
+Obteniendo las siguientes pruebas
+![image test](./src/public/img/test.png)
 ## Recursos utilizados
 - @faker-js/faker: utilizado para generar datos realistas y no datos falsos obvios.
 `Versión`: ^9.2.0
@@ -191,4 +210,7 @@ src
 `Versión`: ^1.4.5-lts.1
 - Supertest: proporcionar una abstracción de alto nivel para las pruebas HTTP, al tiempo que le permite bajar a la API de nivel inferior proporcionada por superagent.
 `Versión`: ^6.3.3
-
+- Swagger-jsdoc: Esta biblioteca lee el código fuente anotado por JSDoc y genera una especificación OpenAPI.
+`Versión`: ^6.2.8
+- Swagger-ui-express: Este módulo le permite servir documentos de API generados automáticamente por swagger-ui desde express, basados en un archivo.
+`Versión`: ^5.0.1
