@@ -5,15 +5,16 @@ El proyecto que se presenta simula ser una página gestionadora de mascotas, rel
 
 
 
-
 ## Apéndice
 1. [Instalación](#Instalación)
-3. [Servidor](#Servidor)
-4. [Rutas](#Rutas)
-5. [Endpoints](#Endpoints)
-6. [Autenticacion y autorización](#Autenticacion y autorización)
+2. [Servidor](#Servidor)
+3. [Rutas](#Rutas)
+4. [Endpoints](#Endpoints)
+5. [Autenticacion y autorización](#Autenticacion)
+6. [Swagge](#Swagger)
 7. [Estructura del Proyecto](#estructura)
-8. [Recursos utilizados](#Recursos utilizados)
+8. [Testeo](#Testeo)
+9. [Recursos utilizados](#Recursos)
 
 ## Instalación
 ### Requisitos previos
@@ -115,7 +116,7 @@ Esta aplicacion utiliza cuatros rutas para funcionar:
 
 
 
-## Autenticación y autorización
+## Autenticacion
 
 Se utiliza express-session para mantener la sesión en MongoStore. Adicionalmente se utiliza passport y JsonWebToken como estatregia de autenticación y autorización a lo largo de la navegación del sitio, teniendo como objetivo principal no autorizar ciertos accesos y proteger la sesión del usuario así como también sus datos sensibles. Se utiliza cookie-parser para poder extraer los tokens generados en los inicios de sesión, y permite la navegación durante una hora sin cerrar la sesión de manera automática.
 ## Autenticación y autorización
@@ -191,7 +192,7 @@ npm test
 ```
 Obteniendo las siguientes pruebas
 ![image test](./src/public/img/test.png)
-## Recursos utilizados
+## Recursos
 - @faker-js/faker: utilizado para generar datos realistas y no datos falsos obvios.
 `Versión`: ^9.2.0
 - Bcrypt: Biblioteca para el hash y la verificación de contraseñas.
