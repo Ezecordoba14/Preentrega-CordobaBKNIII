@@ -33,6 +33,10 @@ Iniciar la aplicación
 ```bash
 npm start
 ```
+Para clonar imagen en docker:
+```bash
+docker pull ezecordoba/preentrega-bkniii-cordoba
+```
 
 ## Servidor
 El servidor está configurado para ejecutarse en localhost en el puerto 8080. Una vez que la aplicación esté inicializada con el comando npm start, se puede visualizar el proyecto en un navegador con el siguiente link:
